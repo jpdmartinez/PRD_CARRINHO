@@ -88,6 +88,7 @@ Produto Camiseta removido com sucesso!
 
 Carrinho
 Produto: Calça Jeans || Quantidade: 2 || Subtotal: R$ 259.8
+
 Produto: Tênis || Quantidade: 1 || Subtotal: R$ 199.9
 Total: R$ 459.7
 Total com disconto: R$ 413.73
