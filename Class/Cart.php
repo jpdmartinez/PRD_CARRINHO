@@ -7,7 +7,6 @@ class Cart{
   private array $createdProducts;
   private array $itens = [];
   private Product $product;
-  private float $total;
   private float $discount;
 
   public function __construct(array $createdProducts){
