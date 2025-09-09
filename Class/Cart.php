@@ -2,7 +2,7 @@
 
 require_once("Class/Product.php");
 
-class Carrinho{
+class Cart{
 
   private array $createdProducts;
   private array $itens = [];
@@ -29,7 +29,7 @@ class Carrinho{
 
     if(isset($this->itens[$productId])){
       $this->itens[$productId]['quantity'] += $quantity;
-      return "carrinho atualizado!<br>";
+      return "Carrinho atualizado!<br>";
     }
 
     if(!isset($this->itens[$productId])){
@@ -45,7 +45,7 @@ class Carrinho{
 
   public function removeitem($productId): string {
     if(!isset($this->itens[$productId])){
-      return "Produto não encontrado no carrinho!";
+      return "Produto não encontrado no Carrinho!";
     }
 
     $remove = $this->itens[$productId];
@@ -57,9 +57,9 @@ class Carrinho{
 
   public function listItens(): void {
     if(empty($this->itens)){
-      echo "O carrinho está vazio<br>";
+      echo "O Cart está vazio<br>";
     }else {
-      echo "<h2>Carrinho</h2>";
+      echo "<h2>Cart</h2>";
       foreach ($this->itens as $item) {
         $price = $item['product']->getPrice() * $item['quantity'];
         echo "Produto: {$item['product']->getName()} || Quantidade: {$item['quantity']} || Subtotal:  R$ {$price}<br>";

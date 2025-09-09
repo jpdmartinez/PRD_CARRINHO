@@ -1,7 +1,7 @@
 <?php
 
 require_once("Class/Product.php");
-require_once("Class/Carrinho.php");
+require_once("Class/Cart.php");
 
 $createdProducts = [
   0 => new Product('Camiseta', 0, 59.90, 10),
@@ -9,7 +9,7 @@ $createdProducts = [
   2 => new Product('Tênis', 2, 199.90, 3)
 ];
 
-$carrinho1 = new Carrinho($createdProducts);
+$Cart1 = new Cart($createdProducts);
 
 function showStock(array $createdProducts): void{
   echo "<h2> Estoque</h2>";
@@ -21,18 +21,18 @@ function showStock(array $createdProducts): void{
 
 showStock($createdProducts);
 
-echo $carrinho1->addItem(0, 3);
-echo $carrinho1->addItem(1, 2);
-echo $carrinho1->addItem(2, 1);
+echo $Cart1->addItem(0, 3);
+echo $Cart1->addItem(1, 2);
+echo $Cart1->addItem(2, 1);
 
 showStock($createdProducts);
 
-echo $carrinho1->addItem(1,10);
-echo $carrinho1->removeItem(0);
+echo $Cart1->addItem(1,10);
+echo $Cart1->removeItem(0);
 
 showStock($createdProducts);
 
-$carrinho1->listItens();
+$Cart1->listItens();
 
-echo $carrinho1->applicateDiscount("DESCONTO10");
+echo $Cart1->applicateDiscount("DESCONTO10");
 
